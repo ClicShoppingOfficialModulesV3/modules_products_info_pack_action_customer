@@ -28,6 +28,6 @@ Implementation:
 - Menu design / Products description
 - https://monsite/myAdmin/modules.php?set=modules_products_info
 - Activate the module
-- Copy the modules_products_info_only_web.json into ClicShopping/Work/Cache/Github (manual installation)
+- Copy the modules_products_info_pack_action_customer.json into ClicShopping/Work/Cache/Github (manual installation)
 
 ![image](https://github.com/ClicShoppingOfficialModulesV3/modules_products_info_pack_action_customer/blob/master/ModuleInfosJson/action.png)
