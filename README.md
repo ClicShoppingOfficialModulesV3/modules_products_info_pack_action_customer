@@ -30,4 +30,4 @@ Implementation:
 - Activate the module
 - Copy the modules_products_info_only_web.json into ClicShopping/Work/Cache/Github (manual installation)
 
-![image](https://github.com/ClicShoppingOfficialModulesV3/modules_products_info_pack_action_customer/blob/master/MouleInfosJson/action.png)
+![image](https://github.com/ClicShoppingOfficialModulesV3/modules_products_info_pack_action_customer/blob/master/ModuleInfosJson/action.png)
