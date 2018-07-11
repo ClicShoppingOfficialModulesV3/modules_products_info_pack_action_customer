@@ -25,7 +25,7 @@ If you have another template, you must copy the files inside your new template.
 
 Implementation:
 
-- Menu design / Products description
+- Menu design / Products description.
 - https://monsite/myAdmin/modules.php?set=modules_products_info
 - Activate the module
 - Copy the modules_products_info_pack_action_customer.json into ClicShopping/Work/Cache/Github (manual installation)
