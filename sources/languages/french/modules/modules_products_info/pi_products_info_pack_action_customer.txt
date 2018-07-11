@@ -1,0 +1,11 @@
+module_products_info_pack_action_customer = Souhaitez-vous afficher le pack action des clients ?
+module_products_info_pack_action_customer_description = Affiche le pack action des clients dans la page de description du produit
+
+heading_title_pack_action_customer = Mes actions
+text_insert_evaluation = Pas d'évaluation de ce produit : En proposez une !
+text_share = Partager dans mon réseau
+text_evaluate_customers = Evaluation moyenne des clients du produit :
+text_insert_newsletter = M'abonner à la newsletter
+text_notifications_notify = Surveiller les prix de ce produit
+text_tell_a_friend = Envoyer un message à un ami
+text_review = Voir les Commentaires sur ce produit

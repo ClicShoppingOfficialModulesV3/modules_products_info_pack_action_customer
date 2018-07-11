@@ -1,0 +1,11 @@
+module_products_info_pack_action_customer = Do you want to display the customers pack action ?
+module_products_info_pack_action_customer_description = Display the customers pack action
+
+heading_title_pack_action_customer = My actions
+text_insert_evaluation = &nbsp;No rating on this product : Do you whish evaluate this product ? !
+text_share = Share in my network
+text_evaluate_customers = Customers products evaluation
+text_insert_newsletter = Subscribe the newsletter
+text_notifications_notify = Alert me on the products
+text_tell_a_friend = Send a message to your friend
+text_review = Display the comments on this product
