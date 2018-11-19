@@ -1,6 +1,6 @@
 <?php
 /**
- * pi_products_info_pack_action_customer.php 
+ * pi_products_info_pack_action_customer.php
  * @copyright 2008 - https://www.clicshopping.org
  * @Brand : ClicShopping(Tm) at Inpi all right Reserved
  * @license GPL 2 & MIT
@@ -47,7 +47,7 @@
         if (($CLICSHOPPING_ProductsCommon->getProductsGroupView()  == 1) || ($CLICSHOPPING_ProductsCommon->getProductsView() == 1)) {
 
           $products_id = $CLICSHOPPING_ProductsCommon->getID();
-          $products_name = $CLICSHOPPING_ProductsCommon->getProductsName();
+          $products_name = $CLICSHOPPING_ProductsCommon->getProductsName($products_id);
 // social network
 /*
          if (defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED')) {
