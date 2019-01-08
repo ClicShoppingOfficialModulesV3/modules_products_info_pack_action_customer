@@ -30,4 +30,17 @@ Implementation:
 - Activate the module
 - Copy the modules_products_info_pack_action_customer.json into ClicShopping/Work/Cache/Github (manual installation)
 
+All informations about the ClicShopping
+
+ Community : https://www.clicshopping.org
+
+ Software : https://github.com/ClicShopping
+
+ Official add on : https://github.com/ClicShoppingOfficialModulesV3
+
+ Community add on : https://github.com/ClicShoppingV3Community
+
+ trademark License info : https://www.clicshopping.org/forum/trademark/ 
+
+
 ![image](https://github.com/ClicShoppingOfficialModulesV3/modules_products_info_pack_action_customer/blob/master/ModuleInfosJson/action.png)
