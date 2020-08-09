@@ -186,7 +186,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_STATUS',
         'MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_CONTENT_WIDTH',
         'MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_POSITION',
