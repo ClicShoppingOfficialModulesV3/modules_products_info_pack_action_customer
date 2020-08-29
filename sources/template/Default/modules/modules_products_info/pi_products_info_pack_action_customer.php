@@ -16,10 +16,10 @@
   class pi_products_info_pack_action_customer {
     public $code;
     public $group;
-    public $title;
-    public $description;
-    public $sort_order;
-    public $enabled = false;
+    public string $title;
+    public string $description;
+    public ?int $sort_order = 0;
+    public bool $enabled = false;
 
     public function __construct() {
       $this->code = get_class($this);
@@ -37,7 +37,7 @@
     public function execute() {
       $CLICSHOPPING_ProductsCommon = Registry::get('ProductsCommon');
 
-      if ($CLICSHOPPING_ProductsCommon->getID() && isset($_GET['Products']) ) {
+      if ($CLICSHOPPING_ProductsCommon->getID() && isset($_GET['Products'])) {
 
         $content_width = (int)MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_CONTENT_WIDTH;
         $text_position = MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_POSITION;
@@ -55,7 +55,7 @@
 // social network
 /*
          if (defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED')) {
-           if ( isset($_GET['products_id']) && defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED') && !is_null(MODULE_SOCIAL_BOOKMARKS_INSTALLED) ) {
+           if ( isset($_GET['products_id']) && defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED') && !is_null(MODULE_SOCIAL_BOOKMARKS_INSTALLED)) {
              $sbm_array = explode(';', MODULE_SOCIAL_BOOKMARKS_INSTALLED);
 
              $social_bookmarks = [];
@@ -63,13 +63,13 @@
              foreach ( $sbm_array as $sbm ) {
                $class = basename($sbm, '.php');
 
-               if (!class_exists($class) ) {
+               if (!class_exists($class)) {
                  $CLICSHOPPING_Language->loadDefinitions('modules/social_bookmarks/' . pathinfo($sbm, PATHINFO_FILENAME));
                  include_once('includes/modules/social_bookmarks/' . $class . '.php');
                }
 
 
-               if ( !class_exists($class) ) {
+               if ( !class_exists($class)) {
                  if (is_file($CLICSHOPPING_Template->getSiteTemplateLanguageDirectory() . '/' . $CLICSHOPPING_Language->get('directory') . DIRECTORY_SEPARATOR . 'product_info.php')) {
                    include_once($CLICSHOPPING_Template->getSiteTemplateLanguageDirectory() . '/' . $CLICSHOPPING_Language->get('directory') . DIRECTORY_SEPARATOR . 'modules/social_bookmarks' . DIRECTORY_SEPARATOR . $sbm);
                  } else {
@@ -81,12 +81,12 @@
 
                $sb = new $class();
 
-               if ( $sb->isEnabled() ) {
+               if ( $sb->isEnabled()) {
                  $social_bookmarks[] = $sb->getOutput();
                }
              }
 
-             if ( !empty($social_bookmarks) ) {
+             if ( !empty($social_bookmarks)) {
                $social_network = implode(' ', $social_bookmarks);
              }
            }
