@@ -52,51 +52,12 @@
 
           $products_id = $CLICSHOPPING_ProductsCommon->getID();
           $products_name = $CLICSHOPPING_ProductsCommon->getProductsName($products_id);
-// social network
-/*
-         if (defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED')) {
-           if ( isset($_GET['products_id']) && defined('MODULE_SOCIAL_BOOKMARKS_INSTALLED') && !is_null(MODULE_SOCIAL_BOOKMARKS_INSTALLED)) {
-             $sbm_array = explode(';', MODULE_SOCIAL_BOOKMARKS_INSTALLED);
 
-             $social_bookmarks = [];
-
-             foreach ( $sbm_array as $sbm ) {
-               $class = basename($sbm, '.php');
-
-               if (!class_exists($class)) {
-                 $CLICSHOPPING_Language->loadDefinitions('modules/social_bookmarks/' . pathinfo($sbm, PATHINFO_FILENAME));
-                 include_once('includes/modules/social_bookmarks/' . $class . '.php');
-               }
-
-
-               if ( !class_exists($class)) {
-                 if (is_file($CLICSHOPPING_Template->getSiteTemplateLanguageDirectory() . '/' . $CLICSHOPPING_Language->get('directory') . DIRECTORY_SEPARATOR . 'product_info.php')) {
-                   include_once($CLICSHOPPING_Template->getSiteTemplateLanguageDirectory() . '/' . $CLICSHOPPING_Language->get('directory') . DIRECTORY_SEPARATOR . 'modules/social_bookmarks' . DIRECTORY_SEPARATOR . $sbm);
-                 } else {
-                   require_once($CLICSHOPPING_Template->setSiteThema() . DIRECTORY_SEPARATOR . 'languages'. DIRECTORY_SEPARATOR . $CLICSHOPPING_Language->get('directory') . DIRECTORY_SEPARATOR . 'modules/social_bookmarks' . DIRECTORY_SEPARATOR .$sbm);
-                 }
-
-                 include_once($CLICSHOPPING_Template->getModuleDirectory() . '/social_bookmarks' . DIRECTORY_SEPARATOR . $class . '.php');
-               }
-
-               $sb = new $class();
-
-               if ( $sb->isEnabled()) {
-                 $social_bookmarks[] = $sb->getOutput();
-               }
-             }
-
-             if ( !empty($social_bookmarks)) {
-               $social_network = implode(' ', $social_bookmarks);
-             }
-           }
-         }
-*/
           $Qreviews = $CLICSHOPPING_Db->prepare('select round(AVG(reviews_rating),0) as avgrating
-                                          from :table_reviews
-                                          where products_id = :products_id
-                                          and status = 1
-                                        ');
+                                                from :table_reviews
+                                                where products_id = :products_id
+                                                and status = 1
+                                              ');
           $Qreviews->bindInt(':products_id', $products_id);
 
           $Qreviews->execute();
@@ -154,7 +115,7 @@
       $CLICSHOPPING_Db->save('configuration', [
           'configuration_title' => 'A quel endroit souhaitez-vous afficher le code barre ?',
           'configuration_key' => 'MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_POSITION',
-          'configuration_value' => 'none',
+          'configuration_value' => 'float-md-none',
           'configuration_description' => 'Affiche le code barre du produit à gauche ou à droite<br><br><i>(Valeur Left = Gauche <br>Valeur Right = Droite <br>Valeur None = Aucun)</i>',
           'configuration_group_id' => '6',
           'sort_order' => '2',
