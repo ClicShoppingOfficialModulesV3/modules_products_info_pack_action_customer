@@ -115,11 +115,11 @@
       $CLICSHOPPING_Db->save('configuration', [
           'configuration_title' => 'A quel endroit souhaitez-vous afficher le code barre ?',
           'configuration_key' => 'MODULE_PRODUCTS_INFO_PACK_ACTION_CUSTOMER_POSITION',
-          'configuration_value' => 'float-md-none',
+          'configuration_value' => 'float-none',
           'configuration_description' => 'Affiche le code barre du produit à gauche ou à droite<br><br><i>(Valeur Left = Gauche <br>Valeur Right = Droite <br>Valeur None = Aucun)</i>',
           'configuration_group_id' => '6',
           'sort_order' => '2',
-          'set_function' => 'clic_cfg_set_boolean_value(array(\'float-md-right\', \'float-md-left\', \'float-md-none\'))',
+          'set_function' => 'clic_cfg_set_boolean_value(array(\'float-end\', \'float-start\', \'float-none\'))',
           'date_added' => 'now()'
         ]
       );
