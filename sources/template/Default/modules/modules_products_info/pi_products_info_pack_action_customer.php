@@ -15,7 +15,7 @@
 
   class pi_products_info_pack_action_customer {
     public string $code;
-    public $group;
+    public string $group;
     public $title;
     public $description;
     public ?int $sort_order = 0;
